@@ -1,0 +1,26 @@
+.idea/
+.idea/*
+
+**/__pycache__/
+
+media/
+media/*
+
+static/admin/
+
+*.swp
+pizza/.settings.py.swp
+pizza/__init__.pyc
+pizza/settings.pyc
+
+# MacOS
+*.DS_Store
+tests/*
+
+venv/
+venv/*
+
+.env
+pizza/.env
+
+*.pdf
