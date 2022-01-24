@@ -86,7 +86,7 @@ class OrderProgressConsumer(WebsocketConsumer):
         
     def order_status(self, event):
         print(event)
-        data = json.loads(event['value'])
+        data = json.loads(event['payload'])
         # send message to websocket
         self.send(
             text_data=json.dumps({
