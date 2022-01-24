@@ -106,7 +106,8 @@ def order_status_handler(sender, instance, created, **kwargs):
         }
 
         async_to_sync(channel_layer.group_send)(
-            'order_%s' % instance.code, {
+            'order_%s' % instance.code,
+            {
                 'type': 'order_status',
                 'value': json.dumps(data)
             }

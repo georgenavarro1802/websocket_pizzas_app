@@ -80,13 +80,13 @@ class OrderProgressConsumer(WebsocketConsumer):
             self.room_group_name,
             {
                 'type': 'order_status',
-                'payload': text_data
+                'value': text_data
             }
         )
         
     def order_status(self, event):
         print(event)
-        data = json.loads(event['payload'])
+        data = json.loads(event['value'])
         # send message to websocket
         self.send(
             text_data=json.dumps({
